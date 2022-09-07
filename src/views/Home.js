@@ -3,6 +3,7 @@ import { headerButtonTitle, oneTime, annually, monthly } from "../assets/data";
 import right from "../assets/images/right.svg";
 import Header from "../components/Header";
 import Tab from "../components/Tab";
+import Button from "../components/Button";
 import DateSelect from "../components/DateSelect";
 
 const Home = () => {
@@ -29,7 +30,11 @@ const Home = () => {
     <>
       <div className="flex items-center justify-center flex-col">
         {/* header section */}
-        <Header />
+        <Header
+          title={
+            selectElement === 0 ? "Amis du Festival" : "Festival Leauxcals"
+          }
+        />
 
         {/* select button section */}
         <div className="font-bold h-[19.94px] flex items-center text-black text-sm leading-[14px] mt-[24.15px] mb-[18.96px] capitalize">
@@ -148,6 +153,11 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* continue button */}
+        <div className="flex items-end justify-end w-[730px] mt-[35.64px]">
+          <Button buttonTitle="Continue" />
         </div>
       </div>
     </>

@@ -28,36 +28,4 @@ const DateSelect = () => {
   );
 };
 
-const DateSelect2 = () => {
-  const [selectElement, setSelectElement] = useState(false);
-  const [startDate, setStartDate] = useState();
-  const handleonClick = () => {
-    setSelectElement(!selectElement);
-    console.log("hi");
-  };
-
-  return (
-    <>
-      <div
-        className="w-[187px] h-[30px] flex items-center justify-center bg-[#F3F3F3] rounded-[3px]"
-        // onClick={handleonClick}
-      >
-        <div className="mr-[5.82px]">
-          <p
-            className={`text-[9px] mt-px leading-[9px] 
-             
-                 font-normal text-[#848484]
-            flex items-center justify-center`}
-          >
-            Select Date
-          </p>
-        </div>
-        <div className="">
-          <img src={calenderImg} alt="date-icon" />
-        </div>
-      </div>
-    </>
-  );
-};
-
 export default DateSelect;
