@@ -1,0 +1,60 @@
+.body-section-container {
+  padding: 25px 67px;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+  }
+  .body-section-left {
+    width: 50%;
+    h1 {
+      margin: 0 0 19px 8px;
+    }
+    button {
+      margin: 0 8px 6px 0;
+    }
+  }
+  .body-section-right {
+    width: 36%;
+    h1 {
+      font-size: 12px;
+    }
+    h6 {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 100%;
+      color: #000000;
+      margin: 4px 0 0 0;
+    }
+    h5 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      text-transform: capitalize;
+      color: #000000;
+      margin: 4px 0 0 0;
+    }
+    .benifits-list {
+      margin-top: 22px;
+      p {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin: 4px 0 0 0;
+        img {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
