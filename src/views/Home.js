@@ -12,6 +12,8 @@ const Home = () => {
   const [show, setShow] = useState(true);
   const handleClick = (idx) => {
     setSelectElement(idx);
+    setSelectedDonationButton("");
+    setShow(true);
   };
   const handleDonatinClick = (idx) => {
     setSelectedDonationButton(idx);
