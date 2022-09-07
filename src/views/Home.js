@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { headerButtonTitle, oneTime } from "../assets/data";
+import { headerButtonTitle, oneTime, annually, monthly } from "../assets/data";
 import right from "../assets/images/right.svg";
 import Header from "../components/Header";
 import Tab from "../components/Tab";
@@ -16,6 +16,15 @@ const Home = () => {
     setSelectedDonationButton(idx);
     setShow(false);
   };
+
+  const bodyData =
+    selectElement === 0
+      ? oneTime
+      : selectElement === 1
+      ? monthly
+      : selectElement === 2
+      ? annually
+      : null;
   return (
     <>
       <div className="flex items-center justify-center flex-col">
@@ -75,7 +84,7 @@ const Home = () => {
               choose a donation level
             </p>
             <div className="flex flex-wrap">
-              {oneTime.map((data, idx) => {
+              {bodyData.map((data, idx) => {
                 return (
                   <div
                     className="mr-[8.13px] mb-[6px]"
@@ -87,6 +96,7 @@ const Home = () => {
                         selectedDonationButton === idx ? "selected" : null
                       }`}
                       title={data?.donation}
+                      longButton={selectElement !== 0 ? "longButton" : null}
                     />
                   </div>
                 );
@@ -103,7 +113,7 @@ const Home = () => {
                 Choose amount to view perks
               </p>
             </div>
-            {oneTime.map((data, idx) => {
+            {bodyData.map((data, idx) => {
               return (
                 <div
                   className={`${

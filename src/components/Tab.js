@@ -1,11 +1,15 @@
 import React from "react";
 
-const Tab = ({ title, buttonHeightandWidth, selectElement }) => {
+const Tab = ({ title, buttonHeightandWidth, selectElement, longButton }) => {
   return (
     <div
       className={`cursor-pointer ${
-        buttonHeightandWidth ? "w-[216px] h-[31px]" : "w-[135px] h-[50px]"
-      }  rounded-[3px] 
+        longButton
+          ? "w-[266px] h-[46px]"
+          : buttonHeightandWidth
+          ? "w-[216px] h-[31px]"
+          : "w-[135px] h-[50px]"
+      } rounded-[3px] 
         ${
           selectElement === "selected"
             ? "bg-[#D0D0D0] buttonBorder"
