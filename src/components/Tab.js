@@ -3,8 +3,8 @@ import React from "react";
 const Tab = ({ title, buttonHeightandWidth, selectElement }) => {
   return (
     <div
-      className={`cursor-pointer mr-[14px] ${
-        buttonHeightandWidth ? "w-[216px] h-[31px]" : null
+      className={`cursor-pointer ${
+        buttonHeightandWidth ? "w-[216px] h-[31px]" : "w-[135px] h-[50px]"
       }  rounded-[3px] 
         ${
           selectElement === "selected"
